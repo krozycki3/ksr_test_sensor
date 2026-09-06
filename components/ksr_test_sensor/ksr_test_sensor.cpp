@@ -10,7 +10,8 @@ void KsrTestSensor::setup() {
   ESP_LOGI(TAG, "Uruchamiam KSR Test Sensor");
 }
 
-void KsrTestSensor::loop() {
+void KsrTestSensor::update() {
+  ESP_LOGI(TAG, "Pobieram wartość...");
   this->publish_state(11);
 }
 
