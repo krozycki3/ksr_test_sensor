@@ -6,13 +6,12 @@
 namespace esphome {
 namespace ksr_test_sensor {
 
-class KsrTestSensor : public Component, public sensor::Sensor {
+class KsrTestSensor : public PollingComponent, public sensor::Sensor {
  public:
+  KsrTestSensor() : PollingComponent(60000) {}
+
   void setup() override;
-    // Ta funkcja wywoła się automatycznie zgodnie z update_interval z YAML
-  void update() override {
-        this->publish_state(11);
-    };
+  void update() override;
 };
 
 }  // namespace ksr_test_sensor
