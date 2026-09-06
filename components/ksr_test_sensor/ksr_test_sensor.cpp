@@ -2,15 +2,15 @@
 #include "esphome/core/log.h"
 
 namespace esphome {
-namespace my_sensor {
+namespace ksr_test_sensor {
 
-static const char *TAG = "my_sensor";
+static const char *TAG = "ksr_test_sensor";
 
-void MySensor::update() {
-  ESP_LOGI(TAG, "Odczytuję wartość...");
+void KsrTestSensor::update() {
+  ESP_LOGI(TAG, "Wykonuję odczyt");
 
   this->publish_state(11);
 }
 
-}  // namespace my_sensor
+}  // namespace ksr_test_sensor
 }  // namespace esphome
