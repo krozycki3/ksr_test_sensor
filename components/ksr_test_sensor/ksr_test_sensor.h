@@ -4,15 +4,12 @@
 #include "esphome/components/sensor/sensor.h"
 
 namespace esphome {
-namespace ksr_test_sensor {
+namespace my_sensor {
 
-class KsrTestSensor : public PollingComponent, public sensor::Sensor {
+class MySensor : public PollingComponent, public sensor::Sensor {
  public:
-  KsrTestSensor() : PollingComponent(60000) {}
-
-  void setup() override;
   void update() override;
 };
 
-}  // namespace ksr_test_sensor
+}  // namespace my_sensor
 }  // namespace esphome
