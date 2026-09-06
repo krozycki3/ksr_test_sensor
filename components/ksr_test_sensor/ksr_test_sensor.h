@@ -13,6 +13,7 @@ class KsrTestSensor : public Component, public sensor::Sensor {
   void update() override {
         this->publish_state(11);
     };
+};
 
 }  // namespace ksr_test_sensor
 }  // namespace esphome
