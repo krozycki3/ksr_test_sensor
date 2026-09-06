@@ -10,12 +10,17 @@ ksr_test_sensor_ns = cg.esphome_ns.namespace("ksr_test_sensor")
 KsrTestSensor = ksr_test_sensor_ns.class_(
     "KsrTestSensor",
     cg.Component,
-    sensor.Sensor,
 )
 
-CONFIG_SCHEMA = cv.Schema({
-    cv.GenerateID(): cv.declare_id(KsrTestSensor),
-}).extend(sensor.sensor_schema())
+CONFIG_SCHEMA = sensor.sensor_schema(
+    unit_of_measurement="",
+    accuracy_decimals=0,
+).extend(
+    cv.Schema({
+        cv.GenerateID(): cv.declare_id(KsrTestSensor),
+    })
+).extend(cv.COMPONENT_SCHEMA)
+
 
 async def to_code(config):
     var = cg.new_Pvariable(config[CONF_ID])
