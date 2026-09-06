@@ -1,4 +1,4 @@
-#include "my_sensor.h"
+#include "ksr_test_sensor.h"
 #include "esphome/core/log.h"
 
 namespace esphome {
