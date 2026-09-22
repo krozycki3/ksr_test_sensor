@@ -9,10 +9,10 @@ static const char *TAG = "ksr_test_sensor";
 void KsrTestSensor::update() {
   ESP_LOGI(TAG, "Wykonuję odczyt");
 
-  this->publish_state(v);
+  this->publish_state(this->v);
 }
 void KsrTestSensor::setup() {
-    v=24;
+    this->v=24;
 }
 
 }  // namespace ksr_test_sensor

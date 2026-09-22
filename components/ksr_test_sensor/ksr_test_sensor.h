@@ -11,7 +11,7 @@ class KsrTestSensor : public PollingComponent, public sensor::Sensor {
   void update() override;
   void setup() override;
  private:
-  uint16_t i=2;
+  uint16_t v=2;
 };
 
 }  // namespace ksr_test_sensor
