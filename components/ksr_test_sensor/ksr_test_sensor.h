@@ -9,6 +9,9 @@ namespace ksr_test_sensor {
 class KsrTestSensor : public PollingComponent, public sensor::Sensor {
  public:
   void update() override;
+  void setup() override;
+ private:
+  uint16_t i=2;
 };
 
 }  // namespace ksr_test_sensor
