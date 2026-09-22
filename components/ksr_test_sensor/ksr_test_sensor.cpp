@@ -13,6 +13,8 @@ void KsrTestSensor::update() {
 }
 void KsrTestSensor::setup() {
     this->v=24;
+  ESP_LOGI(TAG, "Setup () wykonane");
+
 }
 
 }  // namespace ksr_test_sensor
